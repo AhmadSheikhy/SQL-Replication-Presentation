@@ -1,0 +1,96 @@
+:root {
+    --primary-color: #fffdcf;
+    --text-color: #6c1b4a;
+    --border-color: #ffb1e2;
+    --font-heading: 'Dubai', serif;
+    --font-body: 'Dubai', sans-serif;
+    --transition: all 0.3s ease;
+}
+
+
+body {
+    font-family: "Dubai";
+    font-size: x-large;
+    background: #fffdcf;
+    color: #6c1b4a;
+    margin: 10px;
+}
+
+.navbar {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    background: #fffdcf;
+    color: #6c1b4a;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    height: 15px;
+    padding: 20px 8%;
+    transition: var(--transition);
+}
+
+.navbar.scrolled {
+    background: #6c1b4a;
+    color: var(--primary-color);
+    padding: 20px 0%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    font-family: "Dubai";
+    font-weight: bold;
+    font-style: italic;
+    background: #6c1b4a;
+    color: #fffdcf;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px #6c1b4a;
+}
+
+.title {
+    font-family: "Dubai";
+    font-weight: bold;
+    font-style: italic;
+    color: #6c1b4a;
+}
+
+.quote {
+    font-style: italic;
+    font-weight: bold;
+    box-shadow: 0 5px 1px #fffdcf;
+    border-radius: 3px;
+}
+
+
+.main {
+    font-family: "Dubai";
+    background: #8f2c6629;
+    color: #6c1b4a;
+    border-radius: 20px;
+    box-shadow: 0 5px 10px #6c1b4a;
+    margin: 30px;
+}
+
+.link {
+    color: inherit;
+    text-decoration: dotted;
+}
+
+
+
+@supports (animation-timeline: view()) {
+.fade-in {
+    animation : fade-in linear both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+}
+
+@keyframes fade-in {
+    from { opacity: 0; transform: translateY(24px);}
+    to { opacity: 1; transform: translateY(0px);}
+}
