@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL Replication</title>
+    <style>
+        body {
+            font-family: "Dubai";
+            font-size: x-large;
+            background: #fffdcf;
+            color: #6c1b4a;
+            padding-top: 30px;
+            margin: 10px;
+        }
+
+        .header {
+            font-family: "Dubai";
+            font-weight: bold;
+            font-style: italic;
+            background: #6c1b4a;
+            color: #fffdcf;
+            border-radius: 5px;
+            box-shadow: 0 5px 10px #6c1b4a;
+        }
+
+        .title {
+            font-family: "Dubai";
+            font-weight: bold;
+            font-style: italic;
+            background: #6c1b4a;
+            color: #fffdcf;
+        }
+
+        .quote {
+            font-style: italic;
+            font-weight: bold;
+            box-shadow: 0 5px 1px #6c1b4a;
+            border-radius: 3px;
+        }
+
+        @supports (animation-timeline: view()) {
+        .fade-in {
+            animation : fade-in linear both;
+            animation-timeline: view();
+            animation-range: entry 0% cover 40%;
+        }
+    }
+
+        @keyframes fade-in {
+            from { opacity: 0; transform: translateY(24px);}
+            to { opacity: 1; transform: translateY(0px);}
+        }
+    </style>
+</head>
+<body dir="rtl">
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+    <div class="fade-in" id="header">
+        <h1 class="header" style="text-align: center;">SQL Replication</h1>
+    </div>
+    <br><br>
+    <div class="fade-in" id="overview-title" style="width: fit-content;">
+        <h2 class="title"> بررسی عمل Replication در SQL</h2>
+    </div>
+
+    <div id="overview-text">
+        <p class="fade-in" style="margin: 10px;">
+            عمل Replication یکی از ویژگی‌های سطح بالای SQL Server محسوب می‌شود. Replication متقابل هنگامی استفاده می‌شود که تغییرات شمای DML یا DDL اجرا شده روی یک شی موجود در دیتابیس یک سرور در بازه زمانی Real نیازمند منعکس شدن بر روی پایگاه داده‌ای موجود بر روی سرور دیگر نیز باشد. 
+        </p>
+
+        <p class="fade-in" style="margin: 10px;">
+            با استفاده از Replication می‌توانیم داده‌ها را به مکان‌های مختلف و میان کاربران از راه یا ریموت در سراسر شبکه‌های محلی و نیز گسترده و ارتباطات dial-up و wireless و همچنین در اینترنت، توزیع کنیم. دلایل و سناریوهای مختلفی موجود است که موجب می‌شود که Replication به عنوان ابزاری قدرتمند برای پخش کردن و انتشار داده‌ها در نظر گرفته شود.
+        </p>
+
+        <blockquote class="fade-in" style="width: fit-content;">
+                <p class="quote">
+                "
+                Replication به عنوان ابزاری قدرتمند برای پخش کردن و انتشار داده‌ها در نظر گرفته می‌شود.
+                "
+                </p>
+
+                <p class="quote">
+                    Replication  گزینه مناسبی است برای زمانی که اطلاعات مورد نظر read only بوده و نیازی به آپدیت کردن source نداریم.
+                </p>
+        </blockquote>
+    </div>
+
+
+
+    <br><br><br><br><br><br>
+    <table border="25px" class="fade-in" style="border-radius: 10px;">
+        <caption> Operation data</caption>
+        <thead style="background-color: #6c1b4a; color: #fffdcf; font-weight: bold; border-radius: 6px; align-items: center;">
+            <tr>
+                <th>DATA PROVIDER</th>
+                <th>DATE</th>
+                <th>CODE</th>
+            </tr>
+        </thead>
+        <tbody style="text-align: center;">
+            <tr>
+                <td>PRTS</td>
+                <td>1234632</td>
+                <td>17-15</td>
+            </tr>
+
+            <tr class="thick">
+                <td>ZOOT</td>
+                <td>1234632</td>
+                <td>16-12</td>
+            </tr>
+        </tbody>
+    </table>
+    
+
+    <br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>
