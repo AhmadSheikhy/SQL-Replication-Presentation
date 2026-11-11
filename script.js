@@ -77,3 +77,33 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     });
 });
+
+
+
+const toggle = document.querySelector('.nav-toggle');
+const toc    = document.getElementById('content-list');
+
+function setOpen(open) {
+  toc.classList.toggle('open', open);
+  toggle.setAttribute('aria-expanded', String(open));
+  document.body.style.overflow = open ? 'hidden' : '';  // stop background scroll
+}
+
+toggle.addEventListener('click', () => {
+  setOpen(!toc.classList.contains('open'));
+});
+
+/* Close after tapping a link (the jump still happens) */
+toc.addEventListener('click', (e) => {
+  if (e.target.closest('.link')) setOpen(false);
+});
+
+/* Close on Escape — keyboard users need this */
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') setOpen(false);
+});
+
+/* If the window grows past the breakpoint while open, reset */
+window.addEventListener('resize', () => {
+  if (innerWidth > 700) setOpen(false);
+});
