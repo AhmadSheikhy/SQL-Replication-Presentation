@@ -1,33 +1,31 @@
 :root {
-    --primary-color: #fffdcf;
-    --text-color: #6c1b4a;
+    --primary-color: #fdfdfd;
+    --text-color: #000000;
     --border-color: #ffb1e2;
     --font-heading: 'Dubai', serif;
     --font-body: 'Dubai', sans-serif;
     --transition: all 0.3s ease;
+    --nav-h: 64px;
 }
 
 
 body {
     font-family: "Dubai";
-    font-size: x-large;
-    background: #fffdcf;
-    color: #6c1b4a;
-    margin: 10px;
+    background: #fdfdfd;
+    color: #000000;
 }
 
 .navbar {
     position: fixed;
     top: 0px;
-    width: 100%;
+    width: 110%;
     z-index: 100;
     display: flex;
     align-items: center;
-    background: #fffdcf;
-    color: #6c1b4a;
+    background: #fdfdfd;
+    color: #000000;
     overflow: hidden;
     text-overflow: ellipsis;
-    border-radius: 10px;
     margin-bottom: 5px;
     height: 15px;
     padding: 20px 8%;
@@ -35,9 +33,9 @@ body {
 }
 
 .navbar.scrolled {
-    background: #6c1b4a;
+    background: #000000;
     color: var(--primary-color);
-    padding: 20px 0%;
+    padding: 20px 1%;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -45,34 +43,32 @@ body {
     font-family: "Dubai";
     font-weight: bold;
     font-style: italic;
-    background: #6c1b4a;
-    color: #fffdcf;
+    background: #000000;
+    color: #fdfdfd;
     border-radius: 5px;
-    box-shadow: 0 5px 10px #6c1b4a;
+    box-shadow: 0 5px 10px #000000;
 }
 
 .title {
     font-family: "Dubai";
     font-weight: bold;
     font-style: italic;
-    color: #6c1b4a;
+    color: #000000;
 }
 
 .quote {
     font-style: italic;
     font-weight: bold;
-    box-shadow: 0 5px 1px #fffdcf;
+    box-shadow: 0 5px 1px #fdfdfd;
     border-radius: 3px;
 }
 
 
 .main {
     font-family: "Dubai";
-    background: #8f2c6629;
-    color: #6c1b4a;
-    border-radius: 20px;
-    box-shadow: 0 5px 10px #6c1b4a;
-    margin: 30px;
+    background: #ffffff29;
+    color: #000000;
+    box-shadow: 0 5px 1px #000000;
 }
 
 .link {
@@ -80,6 +76,19 @@ body {
     text-decoration: dotted;
 }
 
+.layout {
+  display: grid;
+  grid-template-columns: 15% 1fr;
+  gap: 24px;
+  align-items: start;   /* ← this is the whole trick: children don't stretch */
+}
+
+.toc {
+  position: sticky;
+  top: calc(var(--nav-h) + 16px);
+  max-height: calc(100vh - var(--nav-h) - 32px);
+  overflow-y: auto;
+}
 
 
 @supports (animation-timeline: view()) {

@@ -2,7 +2,7 @@
 const title=document.getElementById('navTitle');
 const defaultTitle = title.textContent;
 const sections = [...document.querySelectorAll('section[id]')];
-const OFFSET = 90;
+const OFFSET = 20;
 
 function updateTitle() {
   let current = null;
