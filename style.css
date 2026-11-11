@@ -39,6 +39,13 @@ body {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
+.nav-title {
+    transition: Opacity 0.25s ease-out;
+}
+.navtitle.fading {
+  opacity: 0;
+}
+
 .header {
     font-family: "Dubai";
     font-weight: bold;
@@ -72,8 +79,16 @@ body {
 }
 
 .link {
-    color: inherit;
+    color: #000000;
     text-decoration: dotted;
+    transition: var(--transition);
+}
+
+.link.scrolled {
+    background-color: #000000;
+    color: #fdfdfd;
+    border-radius: 5px;
+    margin: 10%;
 }
 
 .layout {
@@ -88,7 +103,10 @@ body {
   top: calc(var(--nav-h) + 16px);
   max-height: calc(100vh - var(--nav-h) - 32px);
   overflow-y: auto;
+  text-align: center;
 }
+
+
 
 
 @supports (animation-timeline: view()) {

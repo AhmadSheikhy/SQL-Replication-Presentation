@@ -10,10 +10,9 @@
 <body dir="rtl">
 
     <nav class="navbar" aria-label="منوی اصلی">
-        <h2 id="navTitle"></h2>
+        <h2 class="nav-title" id="navTitle">Replication در SQL Server</h2>
     </nav>
 
-    <section id=header" data-title="Replication در SQL Server"> </section>
     <br>
     <section id=name" data-title="ارائه دهندگان: احمد شیخی، امیررضا غلامی"> </section>
     <img src="ReplicationH.png" alt="Replication" width="100%" height=auto">
@@ -21,7 +20,21 @@
     <main class="layout">
 
         <aside class="toc">
-            <p> فهرست مطالب</p>
+            <p class="fade-in" style="font-weight: bold;">
+                فهرست مطالب
+            </p>
+
+            <p>
+                <a  class="link" href="#replication-intro" data-title="Replication چیست؟">1- Replication چیست؟</a>
+            </p>
+
+            <p>
+                <a class="link" href="#basics" data-title="اصطلاحات پایه Replication">2- اصطلاحات پایه Replication</a>
+            </p>
+
+            <p>
+                <a class="link" href="#agents" data-title="Agentهای Replication">3- Agentهای Replication</a>
+            </p>
         </aside>
 
 
@@ -42,13 +55,13 @@
                             <p>تغییرات اعمال‌شده روی یک سرور (DML/DDL) را — غالباً در بازه چند ثانیه — روی سرورهای دیگر منعکس میکند.</p>
                         </li>
                         <li>
-                            <p>کاربردها: گزارش‌گیری فقط‌خواندنی (Only read)، توزیع داده میان کاربران راه دور، و کاهش بار روی سرور مرکزی.</p>
+                            <p>کاربردها: گزارش‌گیری فقط‌خواندنی (Read Only)، توزیع داده میان کاربران راه دور، و کاهش بار روی سرور مرکزی.</p>
                         </li>
                     </ul>
                 </div>
             </section>
 
-            <section id="basics" data-title="اطلاحات پایه Replication" style="margin-right: 10px;">
+            <section id="basics" data-title="اصطلاحات پایه Replication" style="margin-right: 10px;">
                 <div class="fade-in" style="width: fit-content;">
                     <h2 class="title"> اصطلاحات پایه Replication</h2>
                 </div>
