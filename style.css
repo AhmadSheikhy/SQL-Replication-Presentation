@@ -90,6 +90,10 @@ body {
   align-items: start;   /* ← this is the whole trick: children don't stretch */
 }
 
+.img {
+  width: 50%;
+  height: auto;
+}
 @media (max-width: 700px) {
   .toc {
     position: fixed;
@@ -118,6 +122,10 @@ body {
 
   /* Stack the page layout — drawer is fixed, so it doesn't push content */
   .layout { grid-template-columns: 1fr; }
+
+  .img {
+    width: 80%;
+  }
 }
 
 
