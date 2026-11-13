@@ -40,7 +40,7 @@ let ticking = false;
 addEventListener('scroll', () => {
   if (ticking) return;
   ticking = true;
-  requestAnimationFrame(() => { updateTitle(); ticking = false; });
+  requestAnimationFrame(() => { updateTitle(); updateProgress(); ticking = false; });
 }, { passive: true });
 
 addEventListener('resize', updateTitle);
@@ -107,3 +107,14 @@ document.addEventListener('keydown', (e) => {
 window.addEventListener('resize', () => {
   if (innerWidth > 700) setOpen(false);
 });
+
+
+
+const progress = document.getElementById('scrollProgress');
+
+function updateProgress() {
+  const doc = document.documentElement;
+  const max = doc.scrollHeight - doc.clientHeight;   // total scrollable distance
+  const pct = max > 0 ? (window.scrollY / max) * 100 : 0;
+  progress.style.width = Math.min(pct, 100) + '%';
+}
